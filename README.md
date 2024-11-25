@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
+Rewrite this into markdown:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tip Calculator
 
-Currently, two official plugins are available:
+> Simple desktop application to calculate tips on a bill
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v16 or higher)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- pnpm (to install, run: npm install -g pnpm)
 
-- Configure the top-level `parserOptions` property like this:
+## Setup
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Clone the Repository
+
+```sh
+git clone <repostitory_url>
+cd tip-calculator
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Install Dependencies
+
+```sh
+pnpm install
+```
+
+## Run the Development Server
+
+```sh
+pnpm dev
+```
+
+This starts the Vite development server. Open the browser to see the application.
+
+## Start Electron (Desktop Version)
+
+In a separate terminal, run:
+
+```sh
+pnpm exec electron .
+```
+
+## Build for Production
+
+```sh
+pnpm build
+```
+
+This bundles the front-end, compiles TypeScript, and packages the Electron app.
+
+Preview the Build
+
+```sh
+pnpm preview
+```
