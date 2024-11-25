@@ -147,7 +147,12 @@ function App() {
           </div>
           <button
             onClick={resetCalculator}
-            className="w-full bg-strong-purple text-very-dark-purple font-bold py-3 rounded mt-8 hover:bg-light-grayish-purple hover:text-very-dark-purple transition"
+            disabled={!bill && !tip && !customTip && !people}
+            className={`w-full bg-strong-purple text-very-dark-purple font-bold py-3 rounded mt-8 transition ${
+              bill || tip || customTip || people
+                ? "hover:bg-light-grayish-purple hover:text-very-dark-purple"
+                : "opacity-50 cursor-not-allowed"
+            }`}
           >
             RESET
           </button>
