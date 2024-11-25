@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pack:mac": "electron-builder --config ./electron-builder.json5 --mac dmg mas",
+    "pack:win": "electron-builder --config ./electron-builder.json5 --win nsis portable"
   },
   "dependencies": {
     "react": "^18.2.0",
