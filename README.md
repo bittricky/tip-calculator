@@ -1,5 +1,3 @@
-Rewrite this into markdown:
-
 # Tip Calculator
 
 > Simple desktop application to calculate tips on a bill
